@@ -32,19 +32,31 @@ const page = () => {
     // const fetchProduct = async () => {
     //   try {
     //     if (router.isReady) {
-    //       const response = await fetch(`/api/product/${id}`);
-    //       const data = await response.json();
+    //       if (id.length > 9) {
+    //         alert("greater");
+    //         const response = await fetch(`/api/product/${id}`);
+    //         const data = await response.json();
 
+    //         setId(router.query.id);
+    //         console.log(product);
+    //         setProduct(data);
+    //         setHeader(data?.category);
+    //         setLoading(false);
+    //       }
+
+    //       alert("less");
+
+    //       const product = menuEmpty.find((item) => item._id === id);
     //       setId(router.query.id);
     //       console.log(product);
-    //       setProduct(data);
-    //       setHeader(data?.category);
+    //       setHeader(product?.category);
     //       setLoading(false);
+    //       setProduct(product);
 
-    //       if (!response.ok) {
-    //         const errorData = await response.json();
-    //         return;
-    //       }
+    //       // if (!response.ok) {
+    //       //   const errorData = await response.json();
+    //       //   return;
+    //       // }
     //     } else {
     //       setLoading(true);
     //     }

@@ -41,25 +41,6 @@ const Upload = () => {
   // useEffect(() => {
   //   if (!vendor) return;
 
-  //   const fetchUser = async () => {
-  //     try {
-  //       const response = await fetch(`/api/users/${vendor}`);
-
-  //       if (!response.ok) {
-  //         const errorData = await response.json();
-  //         return;
-  //       }
-
-  //       const data = await response.json();
-  //       setUser(data);
-  //       // console.log(data);
-  //     } catch (err) {
-  //       console.error("Error fetching user:", err);
-  //       setError("Error fetching user");
-  //     }
-  //   };
-
-  //   fetchUser();
   // }, []);
 
   const addSize = () => {
@@ -105,7 +86,7 @@ const Upload = () => {
             const data = await response.json();
             console.log(data);
             setMessage(data.message);
-            router.push(`/allProducts/${category}`);
+            router.push(`/product/${data.result._id}`);
           } else {
             const error = await response.json();
           }
